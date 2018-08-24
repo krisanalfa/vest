@@ -1,8 +1,11 @@
-import { NestFactory, FastifyAdapter } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './app.module'
+import { Bootstrap } from './bootstrap'
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule, new FastifyAdapter());
-  await app.listen(3000);
-}
-bootstrap();
+(async () =>
+  new Bootstrap({
+    module: AppModule
+  }).main())().catch(e => {
+  // tslint:disable-next-line:no-console
+    console.error(e)
+    process.exit(1)
+  })
