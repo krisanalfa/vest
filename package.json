@@ -4,19 +4,18 @@
     "build": "yarn clean && yarn build:client && yarn build:server",
     "build:client": "nuxt build",
     "build:server": "tsc",
-
     "clean": "yarn clean:client && yarn clean:server",
     "clean:client": "rimraf .nuxt",
     "clean:server": "rimraf dist",
-
     "dev": "NODE_ENV=development nodemon",
     "start": "NODE_ENV=production node dist/main.js",
-
-    "lint": "yarn lint:server && yarn lint:client:ts && yarn lint:client:js",
+    "lint": "yarn lint:server && yarn lint:client:ts && yarn lint:client:js && yarn lint:style:css && yarn lint:style:scss && yarn lint:style:vue",
     "lint:server": "tslint --project .",
     "lint:client:ts": "tslint --project resources/",
     "lint:client:js": "eslint --ext .js,.vue resources/",
-
+    "lint:style:css": "stylelint resources/**/*.css",
+    "lint:style:scss": "stylelint resources/**/*.scss",
+    "lint:style:vue": "stylelint resources/**/*.vue",
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json --forceExit --detectOpenHandles"
@@ -49,6 +48,8 @@
     "puppeteer": "^1.7.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended": "^2.1.0",
     "ts-jest": "^23.1.4",
     "ts-loader": "^4.5.0",
     "ts-node": "^7.0.1",
