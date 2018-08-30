@@ -1,11 +1,11 @@
-import * as puppeteer from 'puppeteer';
-import { Test } from '@nestjs/testing';
-import { FastifyAdapter } from '@nestjs/core'
-import { NuxtFactory } from './../src/nuxtjs';
-import { AppModule } from './../src/app.module';
-import { INestApplication } from '@nestjs/common';
+import * as puppeteer from "puppeteer";
+import { Test } from "@nestjs/testing";
+import { FastifyAdapter } from "@nestjs/core";
+import { NuxtFactory } from "./../src/nuxtjs";
+import { AppModule } from "./../src/app.module";
+import { INestApplication } from "@nestjs/common";
 
-describe('HomePage (e2e)', () => {
+describe("HomePage (e2e)", () => {
   let app: INestApplication;
   let nuxt: any;
 
@@ -20,20 +20,20 @@ describe('HomePage (e2e)', () => {
     await app.listen(3000);
 
     nuxt = await NuxtFactory.create({
-      ...require('./../nuxt.config'),
-      dev: false
-    })
+      ...require("./../nuxt.config"),
+      dev: false,
+    });
     app.use(nuxt.render);
   });
 
-  test('/ (GET)', async done => {
+  test("/ (GET)", async done => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('http://localhost:3000/');
-    await page.waitForSelector('.hello > h1');
+    await page.goto("http://localhost:3000/");
+    await page.waitForSelector(".hello > h1");
 
-    const html = await page.$eval('.hello > h1', e => e.innerHTML);
-    expect(html).toBe('Welcome');
+    const html = await page.$eval(".hello > h1", e => e.innerHTML);
+    expect(html).toBe("Welcome");
     done();
   });
 
