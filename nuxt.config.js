@@ -48,6 +48,6 @@ module.exports = {
   ** Typescript configuration
   */
   typescript: {
-    tsconfig: resolve(__dirname, 'resources', 'nuxt-typescript-config.json')
+    tsconfig: resolve(__dirname, 'resources', 'tsconfig.json')
   }
 }

@@ -4,5 +4,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "experimentalDecorators": true
-  }
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "./**/*.spec.ts"
+  ]
 }

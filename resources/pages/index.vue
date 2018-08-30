@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import HelloWorld from '~/components/HelloWorld.vue'
+import HelloWorld from './../components/HelloWorld.vue'
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
