@@ -15,13 +15,16 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component({
   props: {
     error: {
       type: Object,
       required: true
     }
   }
-}
+})
+export default class HelloWorld extends Vue {}
 </script>

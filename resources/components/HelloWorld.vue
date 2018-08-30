@@ -50,13 +50,16 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component({
   props: {
     msg: {
       type: String,
       default: 'Hello World'
     }
   }
-}
+})
+export default class HelloWorld extends Vue {}
 </script>

@@ -3,7 +3,7 @@ import { NestFactory, FastifyAdapter } from '@nestjs/core'
 import { Nuxt } from 'nuxt'
 import { resolve } from 'path'
 
-import { NuxtFactory } from 'nuxtjs'
+import { NuxtFactory } from './../nuxtjs'
 import { StartupConfiguration } from './bootstrap.interfaces'
 
 export class Bootstrap {

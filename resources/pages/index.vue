@@ -7,12 +7,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from '~/components/HelloWorld.vue'
+import { Component, Vue } from 'nuxt-property-decorator'
 
-export default {
+@Component({
   components: {
     HelloWorld
   }
-}
+})
+export default class IndexPage extends Vue {}
 </script>
