@@ -9,22 +9,23 @@
     <nuxt-link
       v-if="error.statusCode === 404"
       class="button"
-      to="/">
+      to="/"
+    >
       Homepage
     </nuxt-link>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
   props: {
     error: {
+      required: true,
       type: Object,
-      required: true
-    }
-  }
+    },
+  },
 })
 export default class HelloWorld extends Vue {}
 </script>

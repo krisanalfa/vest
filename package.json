@@ -4,12 +4,19 @@
     "build": "yarn clean && yarn build:client && yarn build:server",
     "build:client": "nuxt build",
     "build:server": "tsc",
+
     "clean": "yarn clean:client && yarn clean:server",
     "clean:client": "rimraf .nuxt",
     "clean:server": "rimraf dist",
+
     "dev": "NODE_ENV=development nodemon",
     "start": "NODE_ENV=production node dist/main.js",
-    "lint": "tslint -p tsconfig.json -c tslint.js",
+
+    "lint": "yarn lint:server && yarn lint:client:ts && yarn lint:client:js",
+    "lint:server": "tslint --project .",
+    "lint:client:ts": "tslint --project resources/",
+    "lint:client:js": "eslint --ext .js,.vue resources/",
+
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json --forceExit --detectOpenHandles"
@@ -31,11 +38,14 @@
     "@types/node": "^10.9.3",
     "@types/puppeteer": "^1.6.0",
     "@types/supertest": "^2.0.5",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "fork-ts-checker-webpack-plugin": "^0.4.9",
     "jest": "^23.5.0",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.3",
     "nuxt-property-decorator": "^1.2.0",
-    "nuxt-typescript": "^0.11.0",
     "puppeteer": "^1.7.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
@@ -43,7 +53,6 @@
     "ts-loader": "^4.5.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "tslint-config-standard": "^7.1.0",
     "typescript": "^3.0.3",
     "vuex-class": "^0.3.1"
   },

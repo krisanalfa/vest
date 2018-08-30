@@ -1,13 +1,13 @@
-import { Builder, Nuxt, NuxtConfig } from 'nuxt'
+import { Builder, Nuxt, NuxtConfig } from "nuxt";
 
 export class NuxtFactory {
-  static async create (nuxtConfig: NuxtConfig) {
-    const nuxt = new Nuxt(nuxtConfig)
+  public static async create(nuxtConfig: NuxtConfig) {
+    const nuxtInstance = new Nuxt(nuxtConfig);
 
     if (nuxtConfig.dev) {
-      await new Builder(nuxt).build()
+      await new Builder(nuxtInstance).build();
     }
 
-    return nuxt
+    return nuxtInstance;
   }
 }

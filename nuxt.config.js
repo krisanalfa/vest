@@ -19,7 +19,7 @@ module.exports = {
   ** Modules
   */
   modules: [
-    'nuxt-typescript'
+    '~/modules/typescript'
   ],
   /*
   ** Global CSS

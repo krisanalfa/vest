@@ -1,1 +1,1 @@
-export * from './nuxt'
+export * from "./nuxt";

@@ -5,6 +5,6 @@
       <nuxt-link to="/about">About</nuxt-link>
     </div>
 
-    <router-view/>
+    <router-view />
   </div>
 </template>

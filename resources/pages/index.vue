@@ -2,19 +2,20 @@
   <div class="home">
     <img
       alt="Vue logo"
-      src="~/assets/img/logo.png">
-    <HelloWorld msg="Welcome"/>
+      src="~/assets/img/logo.png"
+    >
+    <HelloWorld msg="Welcome" />
   </div>
 </template>
 
 <script lang="ts">
-import HelloWorld from './../components/HelloWorld.vue'
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
+import HelloWorld from "./../components/HelloWorld.vue";
 
 @Component({
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
 })
 export default class IndexPage extends Vue {}
 </script>
