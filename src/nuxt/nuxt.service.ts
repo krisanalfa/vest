@@ -7,15 +7,15 @@ export class NuxtService implements OnModuleInit {
   private nuxt: any;
 
   public async onModuleInit(): Promise<any> {
-    await this.build();
+    await this.build(process.env.NODE_ENV === "development");
   }
 
   public build(dev: boolean = false): Promise<boolean> {
     this.nuxt = new Nuxt(Object.assign({ dev }, require("./../../nuxt.config")));
 
     return dev
-      ? new Promise((resolve) => resolve(true))
-      : new Builder(this.nuxt).build();
+      ? new Builder(this.nuxt).build()
+      : new Promise((resolve) => resolve(true));
   }
 
   public render(req: IncomingMessage, res: ServerResponse) {
