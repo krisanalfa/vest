@@ -17,5 +17,11 @@ module.exports = {
   },
   plugins: [
     'vue'
-  ]
+  ],
+  rules: {
+    "quotes": ["error", "double"],
+    "comma-dangle": ["error", "always-multiline"],
+    "sort-imports": ["error"],
+    "semi": ["error"]
+  }
 }

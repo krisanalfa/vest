@@ -19,8 +19,6 @@ export class NuxtService implements OnModuleInit {
   }
 
   public render(req: IncomingMessage, res: ServerResponse) {
-    return new Promise((resolve, reject) => {
-      this.nuxt.render(req, res, resolve, reject);
-    });
+    return this.nuxt.render(req, res);
   }
 }
