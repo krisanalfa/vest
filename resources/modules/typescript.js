@@ -9,7 +9,7 @@ const addPackageVersion = function (cache, pkg) {
 
 const createCacheConfig = function createCacheConfig(id, configFile) {
   const cache = {
-    env: process.env.NODE_ENV || 'development'
+    env: process.env.NODE_ENV || 'local'
   }
 
   // Add package versions to cache
@@ -52,7 +52,7 @@ module.exports = function (moduleOptions) {
   )
 
   // Compiler flags
-  const isProduction = process.env.NODE_ENV === 'production'
+  const isProduction = process.env.NODE_ENV !== 'local'
   const useThreads = isProduction && options.parallel
 
   // Resolve config paths
