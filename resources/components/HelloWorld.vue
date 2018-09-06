@@ -70,6 +70,7 @@ import { Component, Vue } from "nuxt-property-decorator";
       type: String,
     },
   },
+  name: "HelloWorld",
 })
 export default class HelloWorld extends Vue {}
 </script>

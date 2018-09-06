@@ -5,7 +5,7 @@ interface IState {
 }
 
 export const state = (): IState => ({
-  message: "",
+  message: "Welcome",
 });
 
 export const getters: Vuex.GetterTree<IState, IState> = {

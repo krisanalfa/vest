@@ -2,7 +2,7 @@ FROM node:10 as build
 WORKDIR /usr/src/app
 COPY . .
 RUN yarn install --production \
-  && mv node_modules node_modules_prod \
+  && cp -R node_modules node_modules_prod \
   && yarn install \
   && yarn build
 
