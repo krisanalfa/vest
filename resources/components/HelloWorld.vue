@@ -64,13 +64,13 @@
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
+  name: "HelloWorld",
   props: {
     msg: {
       default: "Hello World",
       type: String,
     },
   },
-  name: "HelloWorld",
 })
 export default class HelloWorld extends Vue {}
 </script>

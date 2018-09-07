@@ -8,19 +8,4 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import HelloWorld from "./../components/HelloWorld.vue";
-import { State } from "vuex-class";
-
-@Component({
-  components: {
-    HelloWorld,
-  },
-  name: "HomePage",
-})
-export default class HomePage extends Vue {
-  @State("message")
-  message: string;
-}
-</script>
+<script lang="ts" src="./index.ts"></script>

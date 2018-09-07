@@ -567,6 +567,13 @@
     "@babel/helper-regex" "^7.0.0"
     regexpu-core "^4.1.3"
 
+"@babel/polyfill@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.0.0.tgz#c8ff65c9ec3be6a1ba10113ebd40e8750fb90bff"
+  dependencies:
+    core-js "^2.5.7"
+    regenerator-runtime "^0.11.1"
+
 "@babel/preset-env@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.0.0.tgz#f450f200c14e713f98cb14d113bf0c2cfbb89ca9"
@@ -708,7 +715,7 @@
     os-name "^2.0.1"
     ts-node "^6.0.5"
 
-"@nestjs/common@^5.2.2":
+"@nestjs/common@^5.3.0":
   version "5.3.5"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.3.5.tgz#222b0b188138af1b423c610cde83c033bd3c1153"
   dependencies:
@@ -718,7 +725,7 @@
     multer "1.3.0"
     uuid "3.3.2"
 
-"@nestjs/core@^5.2.2":
+"@nestjs/core@^5.3.0":
   version "5.3.4"
   resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-5.3.4.tgz#2a1a08e737e261d7894aba06d8e65ad6c6d0cebc"
   dependencies:
@@ -740,7 +747,7 @@
     "@angular-devkit/schematics" "^0.4.8"
     typescript "^2.9.2"
 
-"@nestjs/testing@^5.2.2":
+"@nestjs/testing@^5.3.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.3.1.tgz#4c3e5a301dbda5eb157575da0f6fd2597a021508"
   dependencies:
@@ -779,7 +786,7 @@
     string-width "^2.0.0"
     strip-ansi "^4.0.0"
 
-"@nuxtjs/opencollective@0.1.0":
+"@nuxtjs/opencollective@0.1.0", "@nuxtjs/opencollective@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/opencollective/-/opencollective-0.1.0.tgz#5dfb10b2148ce77e9590bca9b9ed6e71d2a500eb"
   dependencies:
@@ -1371,8 +1378,8 @@ autoprefixer@^9.0.0:
     postcss-value-parser "^3.2.3"
 
 avvio@^5.8.0:
-  version "5.8.1"
-  resolved "https://registry.yarnpkg.com/avvio/-/avvio-5.8.1.tgz#7aafd5fe8a4b42b264d1016878f95e84aa681fee"
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/avvio/-/avvio-5.9.0.tgz#3513709b7d6a2bd93cb20252a13a875ae54d0b0a"
   dependencies:
     debug "^3.1.0"
     fastq "^1.6.0"
@@ -2425,7 +2432,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-core-js@^2.4.0, core-js@^2.5.0:
+core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -3601,8 +3608,8 @@ fastify-plugin@^1.0.0:
     semver "^5.5.0"
 
 fastify@^1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/fastify/-/fastify-1.11.1.tgz#b8fb1817932adf13d57e4a5370b8df0bc0c979a0"
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-1.11.2.tgz#7495c8134e21e13dccd6bc6b5d036f187faa276e"
   dependencies:
     "@types/pino" "^4.16.0"
     abstract-logging "^1.0.0"
@@ -3800,6 +3807,21 @@ for-own@^1.0.0:
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
+
+fork-ts-checker-webpack-plugin@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-0.4.9.tgz#78607899d4411fdc6faeca5b4db7654c9d8d28a2"
+  dependencies:
+    babel-code-frame "^6.22.0"
+    chalk "^2.4.1"
+    chokidar "^2.0.4"
+    lodash.endswith "^4.2.1"
+    lodash.isfunction "^3.0.8"
+    lodash.isstring "^4.0.1"
+    lodash.startswith "^4.2.1"
+    minimatch "^3.0.4"
+    resolve "^1.5.0"
+    tapable "^1.0.0"
 
 form-data@~2.3.1, form-data@~2.3.2:
   version "2.3.2"
@@ -5411,8 +5433,8 @@ levn@^0.3.0, levn@~0.3.0:
     type-check "~0.3.2"
 
 light-my-request@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/light-my-request/-/light-my-request-3.0.0.tgz#04d56619baa46724487120fbe3c5e94331c549cf"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/light-my-request/-/light-my-request-3.1.0.tgz#c2bc47c329622d4282cd34764f6f4dfbcbe73144"
   dependencies:
     ajv "^6.0.0"
     readable-stream "^3.0.0"
@@ -5484,9 +5506,21 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
+lodash.endswith@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/lodash.endswith/-/lodash.endswith-4.2.1.tgz#fed59ac1738ed3e236edd7064ec456448b37bc09"
+
+lodash.isfunction@^3.0.8:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -5499,6 +5533,10 @@ lodash.mergewith@^4.6.0:
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
+
+lodash.startswith@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/lodash.startswith/-/lodash.startswith-4.2.1.tgz#c598c4adce188a27e53145731cdc6c0e7177600c"
 
 lodash.tail@^4.1.1:
   version "4.1.1"
@@ -6256,7 +6294,84 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-"nuxt-edge@npm:nuxt-edge", "nuxt@npm:nuxt-edge":
+"nuxt-edge@npm:nuxt-edge":
+  version "2.0.0-25603961.baaf67d"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25603961.baaf67d.tgz#e30edd38782148f7113e192df75ad2c86afd204c"
+  dependencies:
+    "@babel/core" "^7.0.0"
+    "@babel/polyfill" "^7.0.0"
+    "@nuxtjs/babel-preset-app" "^0.5.0"
+    "@nuxtjs/friendly-errors-webpack-plugin" "^2.0.2"
+    "@nuxtjs/opencollective" "^0.1.0"
+    "@nuxtjs/youch" "^4.2.3"
+    babel-loader "^8.0.0"
+    cache-loader "^1.2.2"
+    caniuse-lite "^1.0.30000878"
+    chalk "^2.4.1"
+    chokidar "^2.0.4"
+    compression "^1.7.3"
+    connect "^3.6.5"
+    consola "^1.4.3"
+    css-loader "0.28.11"
+    cssnano "^4.0.5"
+    debug "^3.1.0"
+    esm "^3.0.80"
+    etag "^1.8.1"
+    file-loader "^2.0.0"
+    fresh "^0.5.2"
+    fs-extra "^7.0.0"
+    glob "^7.1.2"
+    hash-sum "^1.0.2"
+    html-minifier "^3.5.19"
+    html-webpack-plugin "^3.2.0"
+    ip "^1.1.5"
+    launch-editor-middleware "^2.2.1"
+    lodash "^4.17.10"
+    lru-cache "^4.1.3"
+    memory-fs "^0.4.1"
+    mini-css-extract-plugin "^0.4.2"
+    minimist "^1.2.0"
+    pify "^4.0.0"
+    postcss "^6.0.22"
+    postcss-import "^11.1.0"
+    postcss-import-resolver "^1.1.0"
+    postcss-loader "^2.1.5"
+    postcss-preset-env "^5.1.0"
+    postcss-url "^7.3.2"
+    semver "^5.5.1"
+    serialize-javascript "^1.5.0"
+    serve-static "^1.13.2"
+    server-destroy "^1.0.1"
+    std-env "^1.3.1"
+    style-resources-loader "^1.2.1"
+    thread-loader "^1.2.0"
+    time-fix-plugin "^2.0.3"
+    uglifyjs-webpack-plugin "^1.3.0"
+    upath "^1.1.0"
+    url-loader "^1.1.1"
+    vue "^2.5.17"
+    vue-loader "^15.4.0"
+    vue-meta "^1.5.3"
+    vue-no-ssr "^0.2.2"
+    vue-router "^3.0.1"
+    vue-server-renderer "^2.5.17"
+    vue-template-compiler "^2.5.17"
+    vuex "^3.0.1"
+    webpack "^4.17.1"
+    webpack-bundle-analyzer "^2.13.1"
+    webpack-dev-middleware "^3.2.0"
+    webpack-hot-middleware "^2.22.3"
+    webpack-node-externals "^1.7.2"
+    webpackbar "^2.6.3"
+
+nuxt-property-decorator@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nuxt-property-decorator/-/nuxt-property-decorator-1.2.0.tgz#bdc0ed858ab2b0d70ca9b59ba56a910ff6314144"
+  dependencies:
+    reflect-metadata "^0.1.12"
+    vue-class-component "^6.0.2"
+
+"nuxt@npm:nuxt-edge":
   version "2.0.0-25592089.aeb33e0"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25592089.aeb33e0.tgz#1013829eed3cfa0cd5c71f39189c382d97b22d91"
   dependencies:
@@ -6324,13 +6439,6 @@ number-is-nan@^1.0.0:
     webpack-hot-middleware "^2.22.3"
     webpack-node-externals "^1.7.2"
     webpackbar "^2.6.3"
-
-nuxt-property-decorator@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/nuxt-property-decorator/-/nuxt-property-decorator-1.2.0.tgz#bdc0ed858ab2b0d70ca9b59ba56a910ff6314144"
-  dependencies:
-    reflect-metadata "^0.1.12"
-    vue-class-component "^6.0.2"
 
 nwsapi@^2.0.7:
   version "2.0.8"
@@ -7745,8 +7853,8 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
 
 puppeteer@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.7.0.tgz#edcba2300a50847202c0f19fd15e7a96171ff3bd"
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.8.0.tgz#9e8bbd2f5448cc19cac220efc0512837104877ad"
   dependencies:
     debug "^3.1.0"
     extract-zip "^1.6.6"
@@ -7988,7 +8096,7 @@ regenerator-runtime@^0.10.0:
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
 
-regenerator-runtime@^0.11.0:
+regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
@@ -8263,7 +8371,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.7, resolve@^1.2.0, resolve@^1.3.2, resolve@^1.8.1:
+resolve@^1.1.7, resolve@^1.2.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   dependencies:
